@@ -27,10 +27,11 @@ For indicating the direction or the specific room from which a caller is speakin
 
 # System Architecture
 
-<img width="942" alt="image" src="https://github.com/jiaqiwu66/514_Project/assets/148316400/70dad49c-4b7f-4fab-8385-16732220f916">
+<img width="943" alt="image" src="https://github.com/jiaqiwu66/514_Project/assets/148316400/488cbf81-eef2-40f6-ade5-9dc8043d103d">  
 
 - Detailed diagram
-<img width="909" alt="image" src="https://github.com/jiaqiwu66/514_Project/assets/148316400/fb8cbc22-04f8-433f-833c-4e5d716de310">
+<img width="1047" alt="image" src="https://github.com/jiaqiwu66/514_Project/assets/148316400/193e6d5b-8e21-4e57-bf4d-0521abbf695f">
+
 
 
 
