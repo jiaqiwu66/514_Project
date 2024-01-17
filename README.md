@@ -4,8 +4,9 @@ The Sound Localizer is a device crafted for elderly individuals with hearing imp
 <img width="516" alt="image" src="https://github.com/jiaqiwu66/514_Project/assets/148316400/255a036f-b345-45cc-bcb9-c9acea3a9f6a">
 
 
-# Sensor
-- __Sound Sensor (choose 1)* 3:__  
+# Sensor Devices
+Sensors can be installed in various rooms, such as kitchens, living rooms, and bathrooms. Each sensor is equipped with a microphone and a microcontroller unit (MCU). The MCU activates the microphone and establishes a Wi-Fi connection. When the sensor detects a person‘s call, it captures audio data, including frequency and volume, and sends this information to a display.  
+- __Sound Sensor (choose 1)* 3:__
 1. Adafruit Microphone Amplifier MAX4466 (sound level)
 2. ICS-43434 (frequency + sound level)
 3. I2S+ (frequency + sound level)
@@ -13,7 +14,7 @@ The Sound Localizer is a device crafted for elderly individuals with hearing imp
 
 
 - __MCU *3__  
-Seeed Studio XIAO ESP32S3, provide wifi and battery for each sensor
+Seeed Studio XIAO ESP32S3, control the circuit to power up the sensor and connect it to WIFI
 
 # Display
 - __OLED screen:__ SSD1306 OLED display  
