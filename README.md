@@ -17,12 +17,15 @@ Sensors can be installed in various rooms, such as kitchens, living rooms, and b
 Seeed Studio XIAO ESP32S3, control the circuit to power up the sensor and connect it to WIFI
 
 # Display
+The display device, designed like a wristwatch for seniors, includes a stepper-motor driven gauge needle, a button (ON/OFF), a LED, an OLED screen, a MCU, and a PCB. When the MCU gets a signal from a sensor, it'll do the math. It determines the direction of the caller based on which sensor sends the signal. And identify who is calling by the sound frequency. Then, the pointer indicates the room's location on a panel, the LED flashes as an alert, and the caller's name appears on the OLED screen.
 - __OLED screen:__ SSD1306 OLED display  
 Show text information about the caller, like “ BB’s calling!”
 - __LED__  
 Shining to remind user to see the watch
 - __Pointer：__ Stepper-motor driven gauge needle（like SG90 Micro Servo Motor）  
-For indicating the direction or the specific room from which a caller is speaking
+For indicating the direction or the specific room from which a caller is speaking  
+- __MCU:__ Seeed Studio XIAO ESP32S3  
+Powered up the circuit and connect to WIFI
 <img width="826" alt="image" src="https://github.com/jiaqiwu66/514_Project/assets/148316400/8132b4e5-4e8d-4504-a47a-1c6e5ecaa6aa">
 
 
