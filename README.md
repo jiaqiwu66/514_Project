@@ -10,11 +10,12 @@ Sensors can be installed in various rooms, such as kitchens, living rooms, and b
 1. Adafruit Microphone Amplifier MAX4466 (sound level)
 2. ICS-43434 (frequency + sound level)
 3. I2S+ (frequency + sound level)
-<img width="392" alt="image" src="https://github.com/jiaqiwu66/514_Project/assets/148316400/480805c5-19fe-4cf1-98b3-c7aaab1b65ea">
-
 
 - __MCU *3__  
 Seeed Studio XIAO ESP32S3, control the circuit to power up the sensor and connect it to WIFI
+
+### Sketch
+<img width="847" alt="image" src="https://github.com/jiaqiwu66/514_Project/assets/148316400/dc8322fe-7d52-4a67-b728-f93d1e24b14a">
 
 # Display
 The display device, designed like a wristwatch for seniors, includes a stepper-motor driven gauge needle, a button (ON/OFF), a LED, an OLED screen, a MCU, and a PCB. When the MCU gets a signal from a sensor, it'll do the math. It determines the direction of the caller based on which sensor sends the signal. And identify who is calling by the sound frequency. Then, the pointer indicates the room's location on a panel, the LED flashes as an alert, and the caller's name appears on the OLED screen.
@@ -26,7 +27,10 @@ Shining to remind user to see the watch
 For indicating the direction or the specific room from which a caller is speaking  
 - __MCU:__ Seeed Studio XIAO ESP32S3  
 Powered up the circuit and connect to WIFI
-<img width="826" alt="image" src="https://github.com/jiaqiwu66/514_Project/assets/148316400/8132b4e5-4e8d-4504-a47a-1c6e5ecaa6aa">
+### Sketch
+
+<img width="840" alt="image" src="https://github.com/jiaqiwu66/514_Project/assets/148316400/8ec08bcd-7f01-472e-8c75-60b6d1db702e">
+
 
 
 # System Architecture
