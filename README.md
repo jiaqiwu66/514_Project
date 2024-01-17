@@ -30,10 +30,10 @@ Powered up the circuit and connect to WIFI
 
 
 # System Architecture
-
+- __Work Detail__  
 <img width="1438" alt="image" src="https://github.com/jiaqiwu66/514_Project/assets/148316400/8378b7a7-b67c-442b-9313-65c40f482083">
-
-- Detailed diagram
+  
+- __Architecture Figure__ 
 <img width="1047" alt="image" src="https://github.com/jiaqiwu66/514_Project/assets/148316400/193e6d5b-8e21-4e57-bf4d-0521abbf695f">
 
 
