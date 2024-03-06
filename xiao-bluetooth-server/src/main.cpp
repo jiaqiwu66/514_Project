@@ -118,11 +118,16 @@ void loop() {
         // TODO: change the following code to send your own readings and processed data
         unsigned long currentMillis = millis();
         if (currentMillis - previousMillis >= interval) {
+            String data = "";
             if (soundLevel > 850) {
-                pCharacteristic->setValue("A");
-                pCharacteristic->notify();
-                Serial.println("Notify value: A ");
+                data += "A";
             }
+            if (peakFrequency > 200){
+                data += " qiqi";
+            }
+            pCharacteristic->setValue(data.c_str());
+            pCharacteristic->notify();
+            Serial.println("Notify value: A ");
             // else {
             //     pCharacteristic->setValue("Hello World");
             //     pCharacteristic->notify();

@@ -10,6 +10,8 @@
 #include <Wire.h>
 #include <Adafruit_GFX.h>
 #include <Adafruit_SSD1306.h>
+#include <string>
+using namespace std;
 
 #define SCREEN_WIDTH 128 // OLED display width, in pixels
 #define SCREEN_HEIGHT 64 // OLED display height, in pixels
@@ -65,15 +67,21 @@ static void notifyCallback(
     Serial.print("data: ");
     Serial.write(pData, length);
     Serial.println();
+    String str=String((char *) pData).substring(0,length);
+    Serial.println(str.substring(0,length));
+
+    String room = str.substring(0,1);
+    String name = str.substring(2,length);
+
 
     // String data = String((char *) pData);
-    // Serial.println(data[0]);
-    if (length == 1) {
+    Serial.println(room == "A");
+    if (room == "A") {
       digitalWrite(LED_PIN, HIGH); // Turn the LED on
       Serial.println("LED is ON"); // Print message to the serial monitor
       display.setCursor(0,0);
-      Serial.println("Qiqi is calling!");
-      display.println(F("Qiqi is calling!"));
+      Serial.println(name + " is calling!");
+      display.println(name + " is calling!");
       display.display();
       delay(1000);
       display.clearDisplay();
@@ -81,10 +89,15 @@ static void notifyCallback(
       myStepper.step(stepsPerRevolution / 2);
       delay(2000);
       myStepper.step(-stepsPerRevolution / 2);
-    } else if (length == 2) {
-      Serial.println("ALing is calling!");
-      display.println(F("ALing is calling!"));
+    } else if (room == "B") {
+      digitalWrite(LED_PIN, HIGH); // Turn the LED on
+      Serial.println("LED is ON"); // Print message to the serial monitor
+      display.setCursor(0,0);
+      Serial.println(name + " is calling!");
+      display.println(name + " is calling!");
       display.display();
+      delay(1000);
+      display.clearDisplay();
       // rotate the pointer
       myStepper.step(stepsPerRevolution);
       delay(2000);
@@ -184,9 +197,10 @@ void setup() {
   myStepper.setSpeed(60);
 
   Serial.begin(115200);
+  pinMode(LED_PIN, OUTPUT); // Set the LED pin as an output
   Serial.println("Starting Arduino BLE Client application...");
   BLEDevice::init("");
-
+  
   // Retrieve a Scanner and set the callback we want to use to be informed when we
   // have detected a new device.  Specify that we want active scanning and start the
   // scan to run for 5 seconds.
